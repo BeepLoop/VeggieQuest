@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>VeggieQuest</title>
-    </head>
-    <body>
-        <h1>temporary page</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VeggieQuest</title>
+    <link rel="stylesheet" href="./homepage.css">
+    <script src="./character-selection.js" defer></script>
+</head>
+
+<body>
+    <div class="character-selection-wrapper">
+        <div class="character-selection-header">
+            <h1>Select your character</h1>
+        </div>
+
+        <div class="character-selection">
+            <div class="items">
+                <div class="item active" data-character="kris">
+                    <img src="./public/image/kris.jpeg">
+                </div>
+                <div class=" item next" data-character="steph">
+                    <img src="./public/image/steph.png">
+                </div>
+
+                <div class="button-container">
+                    <div class="button">&#60;</i></div>
+                    <div class="button">&#62;</i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="select-btn-wrapper">
+            <div>
+                <h2 id="character-name">Foo</h2>
+                <button>Select</button>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
