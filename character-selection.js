@@ -1,6 +1,7 @@
 const slider = document.querySelector(".items");
 const slides = document.querySelectorAll(".item");
-const buttons = document.querySelectorAll(".button");
+const NextAndPrevButtons = document.querySelectorAll(".button");
+const selectCharacterBtn = document.getElementById("select-character-btn");
 const characterName = document.getElementById("character-name");
 
 let current = 0;
@@ -9,7 +10,7 @@ let next = current + 1;
 
 setCharacter();
 
-buttons.forEach((button, index) => {
+NextAndPrevButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
         if (index === 0) {
             gotoPrev();
@@ -65,5 +66,22 @@ function gotoSlide(number) {
 
 function setCharacter() {
     characterName.innerText = slider.children[current].attributes["data-character"].value;
-    console.log(slider.children[current].attributes["data-character"].value);
 }
+
+selectCharacterBtn.addEventListener("click", () => {
+    const storedData = localStorage.getItem("veggieQuest");
+    if (!storedData) {
+        console.error("no existing game data");
+    }
+
+    const veggieQuest = {
+        character: characterName.innerText,
+        difficulty: null,
+    }
+
+    const data = JSON.stringify(veggieQuest)
+    localStorage.setItem("veggieQuest", data)
+
+    window.location.href = "difficulty-selection.html"
+})
+

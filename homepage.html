@@ -7,9 +7,25 @@
     <title>VeggieQuest</title>
     <link rel="stylesheet" href="./homepage.css">
     <script src="./character-selection.js" defer></script>
+    <script src="./setting-toggle.js" defer></script>
 </head>
 
 <body>
+    <div class="header">
+        <div class="header-items">
+            <button type="button" id="setting-btn">&#9881;</button>
+            <button type="button">?</button>
+        </div>
+
+        <div class="setting-dropdown" id="setting-dropdown">
+            <ul>
+                <li><a href="#">General</a></li>
+                <li><a href="#">Audio</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="character-selection-wrapper">
         <div class="character-selection-header">
             <h1>Select your character</h1>
@@ -34,10 +50,11 @@
         <div class="select-btn-wrapper">
             <div>
                 <h2 id="character-name">Foo</h2>
-                <button>Select</button>
+                <button id="select-character-btn">Select</button>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
