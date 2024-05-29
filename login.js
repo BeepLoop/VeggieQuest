@@ -13,5 +13,5 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
         return;
     }
 
-    window.location.href = "another.html";
+    window.location.href = "homepage.html";
 })
